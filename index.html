@@ -9,40 +9,40 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        
         font-family: 'Arial', sans-serif;
     }
-    
     /*BARRA DE NAVEGACION*/
     nav{
         background-color: #715d28;
         color: white;
-        display: flex;
-        justify-content: space-between;
         position: sticky;
         top: 0;
+        height: 60px;
+        padding-top: 15px;
     }
-    .titulo_nav{
-        padding: 15px;
+    span{
         padding-left: 30px;
         font-weight: bold;
         font-size: 25px;
     }
-    nav ul{
-        list-style: none;
-        text-align: right;
-        font-size: 16px;
-        margin-top: 18px;  
-        margin-right: 35px;      
+    #inicio{
+        margin-left: 55%;
     }
-    nav ul li{
-        display: inline-block;
-        margin-right: 20px;
+    a{
+        font-size: 18px;
+        margin-top: 20px ;
+        display: inline;
+        color: white;
+        text-decoration: none;
+        margin: 5px;
+        transition: all 0.5s ease;
     }
-    nav ul li:hover{
+    a:hover{
         cursor: pointer;
-        color: #3a85db;
+        color: rgb(32, 113, 219);
+        font-size: 19px;
     }
+
     /*montaña*/
     .montaña{
         display: inline-block;
@@ -158,13 +158,12 @@
     </style>
 </head>
 <body>
-    <nav><p class="titulo_nav">Viajes y Naturaleza</p>
-        <ul>
-            <li>Inicio</li>
-            <li>Galeria</li>
-            <li>Destinos</li>
-            <li>Contacto</li>
-        </ul>
+    <nav>
+        <span>Viajes y Naturaleza</span>
+        <a href="https://google.com" id="inicio">Inicio</a>
+        <a href="https://fontawesome.com/">Galeria</a>
+        <a href="https://googlemaps.com">Destinos</a>
+        <a href="https://hondusite.com">Contacto</a>
     </nav>
     <div class="montaña"><img src="https://www.ecured.cu/images/thumb/7/7f/Monta%C3%B1a00.jpg/1200px-Monta%C3%B1a00.jpg" alt="Montaña">
         <h1>Paisajes de montaña</h1>

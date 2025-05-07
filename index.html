@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animacion CSS</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            background-image: url('https://img.freepik.com/vector-gratis/escena-escuela_1308-30176.jpg?semt=ais_hybrid&w=740');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow: hidden;
+            position: relative;
+        }
+        .base{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 500px;
+            left: 630px;
+            clip-path: circle(50% at 50% 100%);
+        }
+        .barra{
+            background-color: rgb(70, 105, 209);
+            width: 600px;
+            height: 20px;
+            position: absolute;
+            top: 530px;
+            left: 390px;
+            transform-origin: top center;
+            transform: rotate(-8deg);
+            animation-name: girar;
+            animation-duration:  2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .choque img{
+            width: 200px;
+        }
+        .choque {
+            animation-name: aparecer;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 1.4s;
+            position: absolute;
+            top: -60px;
+            left: 777px;
+            opacity: 0;
+        }
+
+        .niño1 img{
+            width: 190px;
+        }
+
+        .niño1 {
+            animation-name: niño1;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            position: absolute;
+            top: 110px;
+            left: 340px;
+            display: inline-block;       
+            margin: 50px;    
+        }
+        .niño2 img{
+            width: 190px;
+        }
+        .niño2 {
+            animation-name: niño2;
+            animation-duration: 2.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            position: absolute;
+            top: 200px;
+            left: 740px;
+            margin: 50px;
+        }
+        @keyframes niño1 {
+            0% { transform: translateY(0);
+            }
+            100% { transform: translateY(240px); 
+            }
+            
+        }
+        @keyframes niño2 {
+            0% { transform: translateY(0); 
+            }
+            30% { transform: translateY(130px); 
+            }
+            50% { transform: translateY(131px); 
+            }
+            100% { transform: translateY(-600px); 
+            }
+            
+        }
+
+        @keyframes girar {
+            0% { transform: rotate(-8deg); }
+            60% { transform: rotate(8deg); }
+            100% { transform: rotate(-8deg); }
+        }
+
+        @keyframes aparecer {
+            0% {opacity: 0;
+                transform: scale(0.5); 
+            }
+            50% { opacity: 1; 
+                transform: scale(1.2); 
+            }
+            100% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="base"></div>
+    <div class="barra"></div>
+
+    <div class="choque"><img src="https://png.pngtree.com/png-clipart/20220124/original/pngtree-hand-drawn-cartoon-shock-explosion-effect-png-image_7192222.png" alt="choque"></div>
+    <div class="niño1"><img src="https://png.pngtree.com/png-vector/20220723/ourmid/pngtree-cartoon-happy-little-boy-jumping-png-image_6040962.png" alt="niño"></div>
+    <div class="niño2"><img src="https://png.pngtree.com/png-vector/20240509/ourmid/pngtree-jumping-child-vector-png-image_12378049.png" alt="niño"></div>
 </body>
 </html>
